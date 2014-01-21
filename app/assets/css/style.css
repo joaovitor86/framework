@@ -1,0 +1,187 @@
+@CHARSET "UTF-8";
+
+/* --------------------------------------------------------------------------------------------------------
+General
+-------------------------------------------------------------------------------------------------------- */
+body{
+	font-family: Helvetica, Tahoma, Verdana;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body{
+	background: #FAFAFA;
+}
+
+h1, h2, h3{
+	margin: 0px 0px;
+	padding: 0px;
+}
+a, a:link, a:visited{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------------------------------------
+Structure
+-------------------------------------------------------------------------------------------------------- */
+div#page{
+	position: relative;
+	min-height: 100%;
+}
+header{
+	position: relative;
+	padding: 5px 7%;
+	background: #333;
+}
+
+header h1{
+	float: left;
+	display: inline;
+	font-family: Helvetica, Tahoma, Verdana;
+	line-height: 180%;
+}
+header h1 a, header h1 a:hover{
+	color: #FFF;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.2); 
+}
+nav{
+	float: right;
+	display: inline;
+}
+nav a{
+	font-size: 20px;
+	line-height: 300%;
+	margin: 0px 10px;
+	text-decoration: none !important;
+	color: #FFF;
+}
+nav a:hover{
+	color: #4671D5;
+}
+#content{
+	padding-bottom: 55px;
+}
+footer{
+	padding: 20px 0px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	font-size: small;
+	color: #CCC;
+	background: #333;
+}
+/* --------------------------------------------------------------------------------------------------------
+Docks
+-------------------------------------------------------------------------------------------------------- */
+article.banner{
+	height: 300px;
+	background: url('../img/blur-1.jpg') left top;
+}
+article.banner h2{
+	padding-top: 100px;
+	font-size: 48px;
+}
+article.banner h3{
+	font-size: 24px;
+}
+article.banner, article.dock{
+	position: relative;
+	padding: 10px 7%;
+}
+article.banner{
+	color: #FFF;
+}
+article.dock{
+	color: #333;
+}
+article.dock h3{
+	font-size: 24px;
+}
+article.highlight1, article.highlight2{
+	color: #FFF;
+}
+article.highlight1{
+	background: #009999;
+}
+article.highlight2{
+	color: #333;
+	background: #DDD;
+}
+a.calltoaction{
+	display: block;
+	margin: 10px auto;
+	padding: 10px 10px;
+	width: 250px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+article.banner a.calltoaction{
+	margin: 10px 0px;
+	color: #FFF;
+	background: rgba(0,0,0,0.5);
+}
+article.dock a.calltoaction{
+	background: #333;
+	color: #FFF;
+}
+article.highlight1 a.calltoaction{
+	background: #FFAA00;
+	color: #FFF;
+}
+article.highlight2 a.calltoaction{
+	background: #009999;
+	color: #FFF;
+}
+a.calltoaction:hover{
+	text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------
+Classes
+-------------------------------------------------------------------------------------------------------- */
+a.button{
+	color: #009;
+	padding: 10px 5px;
+	margin: 5px;
+	text-decoration: none;
+	background: #333;
+	color: #FFF;
+	font-size: normal;
+	border-radius: 5px;
+}
+a.button img{
+	position: relative;
+	top: 2px;
+	margin-right: 2px;
+}
+a.button:hover{
+	text-decoration: underline;
+	background: #444;
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.center{
+	text-align: center;
+}
+.big{
+	font-size: 32px;
+}

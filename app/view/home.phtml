@@ -1,2 +1,27 @@
-<h1>Hello World!</h1>
-<?php var_dump($data); ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Home</title>
+		<link rel="stylesheet" href="<?php echo CSS . 'style.css'; ?>" />
+	</head>
+	<body>
+		<div id="page">
+			<header>
+				<h1>
+					<a href="#">Hello World!</a>
+				</h1>
+				<nav>
+					<?php echo $data['menu_header']; ?>
+				</nav>
+				<div class="clear"></div>
+			</header>
+			<div id="content">
+				<?php echo $data['content']; ?>
+			</div>
+			<footer>
+				Bodruk &copy; 2014
+			</footer>		
+		</div>
+	</body>
+</html>

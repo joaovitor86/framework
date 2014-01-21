@@ -16,7 +16,11 @@ class DAO{
 		$sql = "SELECT $col FROM $table $param";
 		try{
 			$res = $this->conn->query($sql);
-			return $res->fetchAll(PDO::FETCH_ASSOC);
+			if($res){
+				return $res->fetchAll(PDO::FETCH_ASSOC);
+			}else{
+				return false;
+			}
 		}catch(PDOException $e){
 			echo $e->getMessage();
 		}

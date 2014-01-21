@@ -3,34 +3,35 @@
 class Default_Controller{
 		
 	protected $helper;
-	protected $load;
 	protected $dao;
+	protected $session;
+	protected $load;
 	
 	public function __construct(){
 		$this->helper();
 		$this->dao();
+		$this->session();
+		$this->load();
 	}
 	
 	public function __call($name,$args){
 		$data['url'] = $_SERVER['REQUEST_URI'];
-		$this->view('404',$data);
+		$this->load->view('404',$data);
 	}
-		
-	public function helper(){
+
+	private function helper(){
 		$this->helper = new Helpers();
 	}
 	
-	public function dao(){
+	private function dao(){
 		$this->dao = new DAO();
 	}
-
-	public function view($file, $data=null){
-		$path = './app/view/'. $file . '.phtml';
-		if(file_exists($path)){
-			include $path;
-		}else{
-			echo '<h1>Error!</h1>';
-			echo "View file <a href='$path'>$path</a> not found!";
-		}
+	
+	private function session(){
+		$this->session = new Session();
+	}
+	
+	private function load(){
+		$this->load = new Load();
 	}
 }

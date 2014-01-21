@@ -7,8 +7,12 @@ class Index_Controller extends Default_Controller{
 	}
 	
 	public function index(){
-		$data['value'] = $this->dao->select('users', '*');
-		$this->view('home', $data);
+		$p = new Site();
+		$data['site_name'] = 'Nome do Site';
+		$data['site_title'] = 'Nome do Site';
+		$data['menu_header'] = $p->getMenu();
+		$data['content'] = $p->getDocks();		
+		$this->load->view('home', $data);
 	}
 	
 }
